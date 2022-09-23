@@ -47,14 +47,14 @@ const url = 'https://itviec.com/companies/review-company';
   // fs.writeFileSync('dataset-company-vn.json', JSON.stringify(companies));
 
   // call api to store data in database
-  Promise.all(companies.map(async (company, index) => {
-    axios({
-      url: 'http://localhost:4000/api/v1/company',
-      method: 'post',
-      data: company
-    }).then(() => console.log(`success: ${index}`))
-      .catch(err => console.log(err));
-  })).catch(err => console.log(err));
+  // Promise.all(companies.map(async (company, index) => {
+  //   axios({
+  //     url: 'http://localhost:4000/api/v1/company',
+  //     method: 'post',
+  //     data: company
+  //   }).then(() => console.log(`success: ${index}`))
+  //     .catch(err => console.log(err));
+  // })).catch(err => console.log(err));
 
   await browser.close();
 
